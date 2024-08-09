@@ -1,0 +1,67 @@
+<html>
+    <title>MaxiGames | Originals</title>
+    <head>
+        <link rel="stylesheet" href="styleseries.css">
+        <link rel="icon" type="image/x-icon" href="../Assets/mg_favicon.png">
+
+        <script src="https://kit.fontawesome.com/099ae7de0b.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+      </style>
+    </head>
+        
+
+    <body>
+        <div class="banner">
+            <div class="navbar">
+                <a href="../index.html">
+                    <img src="../Assets/maxigameslogoglow.png" alt="MaxiGames Logo" href="../index.html" draggable="false" id="maxigameslogo">
+                </a>
+                <ul>
+                    <li><a href="../gamespage.html"><i class="fa-solid fa-gamepad fa-2xl"></i></a></li>
+                    <li><a href="../index.html"><i class="fa-solid fa-house fa-2xl"></i></a></li>
+                </ul>
+            </div>
+            <div class="content1">
+                <h1 class="seriesTitle">MaxiGames Originals</h1>
+                <section class="flexbox2">
+                    <section class="series">
+                        <div class="item-1" id="item"><a href="../Games/MaxiGamesOriginals/runodin.html"><img src="../Assets/GameCovers/Thumbnails/maxigameOriginals/runodinthumb.png" alt="FNAF"></a></div>
+                    </section>
+                </section>
+        </div>
+        <script>
+            var button = document.getElementById("toggle")
+            let currentTheme = localStorage.getItem("selectedTheme")
+            if (currentTheme == "light-theme") {
+                document.body.classList.toggle(localStorage.getItem("selectedTheme"))
+                button.className = "fa-solid fa-moon fa-2xl"
+            };
+            if (currentTheme == "dark-theme") {
+                document.body.classList.toggle(localStorage.getItem("selectedTheme"));
+                document.body.classList.toggle(localStorage.getItem("selectedTheme"))
+                button.className = "fa-solid fa-sun fa-2xl"
+            };
+            
+            button.onclick = function(){
+                let currentThemee = localStorage.getItem("selectedTheme")
+                if (currentThemee == "light-theme") {
+                    document.body.classList.toggle("light-theme")
+                    localStorage.setItem("selectedTheme", "dark-theme")
+                    button.className = "fa-solid fa-moon fa-2xl"
+                } else {
+                    document.body.classList.toggle("light-theme")
+                    localStorage.setItem("selectedTheme", "light-theme")
+                    button.className = "fa-solid fa-sun fa-2xl"
+                    var flashbang = new Audio("Sounds/flash.mp3")
+                    flashbang.play()
+                };
+            }
+        </script>
+        <div class="footer">
+            <img src="../Assets/maxigameswhite.png" alt="MaxiGames Logo">
+            <p>MaxiGames 2024. Name it. You got it.</p>
+            <a target="_blank" href="https://github.com/maxplayzreal/MaxiGames_Official"><i class="fa-brands fa-github fa-2xl"></i></a>
+        </div>
+    </body>
+</html>
