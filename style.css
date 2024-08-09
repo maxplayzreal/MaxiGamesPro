@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-family: 'Roboto', sans-serif;
+}
+:root{
+    --bgColor: linear-gradient(90deg, rgba(0,0,0), rgb(33, 1, 1));
+    --txtColor: rgba(255,255,255);
+    --txtColor2: rgba(255,255,255, 0.53);
+    --navColor: rgba(0,0,0)
+}
+.light-theme{
+    --bgColor: linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 72, 72));
+    --txtColor: rgb(0, 0, 0);
+    --txtColor2: rgba(0, 0, 0, 0.53);
+    --navColor: rgba(255,255,255)
+}
+
+.content1 button {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 30px;
+    border-style: solid;
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-top: 2.5%;
+    font-size: 30px;
+
+    /* From https://css.glass */
+background: rgba(255, 0, 0, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 0, 0, 1);
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+   background: black;
+}
+::-webkit-scrollbar-thumb{
+    background: rgba(255, 255, 255, 0.46);
+    border-radius: 1rem;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: rgba(255, 255, 255, 0.814);
+}
+
+.banner{
+    width: 100%;
+    max-width: 100%;
+    height: 132.5%;
+    max-height: 250%;
+    background-image: var(--bgColor)   
+}
+
+.content1 h1{
+    background: rgb(255, 0, 0);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    padding-top: 100px;
+    padding-left: 5%;
+
+
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+
+    font-size: 2.5vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    z-index: 2;
+}
+
+.content1 iframe {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    height: 50vh;
+    width: 50vw;
+    padding-top: 5%;
+}
+@-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 40px #e60000;
+    }
+    to {
+      text-shadow: 0 0 25px #e60000;
+    }
+  }
+@keyframes spin {
+    0% {transform: rotate3d(0,1,0, 180deg);}
+    100% {transform: rotate3d(0);}
+}
+
+.navbar{
+    width: 100%;
+    height: 1vh;
+    background-color: var(--navColor);
+    margin: auto;
+    display: flex;
+    padding: 35px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar img{
+    width: 15vh;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+.navbar i{
+    color: var(--txtColor);
+}
+.navbar i:hover{
+    color: rgb(255, 0, 0);
+    transition: 0.25s;
+}
+.content1{
+    background-color: var(--bgColor);
+    height: auto;
+}
+.content1 img{
+    float: right;
+    max-width: 100%;
+    border-radius: 1rem;
+    margin-left: 2%;
+    margin-right: 5%;
+    margin-top: 5%;
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    width: 10%;
+    position: relative;
+    z-index: 2;
+}
+.content1 #logoofpage {
+    width: 25%;
+}
+
+
+.content1 h2{
+    color: var(--txtColor2);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1vw; 
+}
+
+.content1 p{
+    color: var(--txtColor);
+    font-size: 1.25vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 5%;
+    position: relative;
+    z-index: 2;
+}
+
+.footer {
+    width: 100%;
+    height: 15vh;
+    background-color: black;
+    text-align: center;
+}
+
+.footer img{
+    width: 15vh;
+    padding-top: 1vh;
+}
+.footer p{
+    color: rgb(131, 0, 207);
+    padding-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.post3 img{
+    width: 25vh;
+    height: auto;
+}
+.post3{
+    margin-top: 35vh;
+    height: auto;
+}
+.footer i{
+    color: white;
+    margin-top: 2vh;
+}
+.footer i:hover{
+    color: #9600e6;
+    transition: 0.25s;
+}
+.post4 {
+    padding-bottom: 10vh;
+}
+.post4 a {
+    color: var(--txtColor) ;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.content1 #cool-particles{
+    height: 125%;
+    visibility: visible;
+    position: absolute;
+    z-index: 0;
+}

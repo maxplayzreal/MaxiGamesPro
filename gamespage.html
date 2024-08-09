@@ -1,0 +1,153 @@
+<html>
+    <title>MaxiGames | Games</title>
+    <head>
+        <link rel="stylesheet" href="stylegamepage.css">
+        <link rel="icon" type="image/x-icon" href="Assets/mg_favicon.png">
+
+        <script src="https://kit.fontawesome.com/099ae7de0b.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+      </style>
+    </head>
+        
+
+    <body>
+        <div class="banner">
+            <div class="navbar">
+                <a href="index.html">
+                    <img src="Assets/maxigameslogoglow.png" alt="MaxiGames Logo" href="index.html" draggable="false" id="maxigameslogo">
+                </a>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-gamepad fa-2xl"></i></a></li>
+                    <li><a href="index.html"><i class="fa-solid fa-house fa-2xl"></i></a></li>
+                    <li><i class="fa-solid fa-sun fa-2xl" id="toggle"></i></li>
+                </ul>
+            </div>
+            <div class="content1">
+                <section class="flexbox1">
+                    <section class="container">
+                        <div class="slider-wrapper">
+                            <h1 class="newGames">✨ New Games ✨</h1>
+                            <div class="slider">
+                                <a href="Games/NoSeries/retrobowl.html"><img id="slide-1" src="Assets/GameCovers/Thumbnails/no_series/retrobowl.webp" alt="Retro Bowl"></a>\
+                                <a href="Games/NoSeries/ScaryMaze.html"><img id="slide-1" src="Assets/GameCovers/Thumbnails/no_series/scarymaze.webp" alt="Scary Maze"></a>
+                                <a href="Games/NoSeries/BurgerAndFrights.html"><img id="slide-2" src="Assets/GameCovers/Thumbnails/no_series/burgerandfrights.jpg" alt="Burgers & Frights"></a>
+                                <a href="Games/NoSeries/wbwwb.html"><img id="slide-3" src="Assets/GameCovers/Thumbnails/no_series/wbwwb.png" alt="WBWWB"></a>
+                                <a href="Games/NoSeries/cookieclicker.html"><img id="slide-4" src="Assets/GameCovers/Thumbnails/no_series/cookieclicker.jpg" alt="Cookie Clicker"></a>
+                                <a href="Games/NoSeries/catmario.html"><img id="slide-5" src="Assets/GameCovers/Thumbnails/no_series/catmario.webp" alt="Cat Mario"></a>
+                                <a href="Games/NoSeries/crossyroad.html"><img id="slide-6" src="Assets/GameCovers/Thumbnails/no_series/crossyroad.jpg" alt="Crossy Road"></a>
+                                <a href="Games/NoSeries/portalflash.html"><img id="slide-7" src="Assets/GameCovers/Thumbnails/no_series/portalflash.webp" alt="Portal: The Flash Version"></a>
+                                <a href="Games/NoSeries/subwaysurfers.html"><img id="slide-8" src="Assets/GameCovers/Thumbnails/no_series/subwaysurfers.jpg" alt="Subway Surfers"></a>
+                            </div>
+                            <div class="slider-nav">
+                                <a href="#slide-1"></a>
+                                <a href="#slide-2"></a>
+                                <a href="#slide-3"></a>
+                                <a href="#slide-4"></a>
+                                <a href="#slide-5"></a>
+                                <a href="#slide-6"></a>
+                                <a href="#slide-7"></a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="container">
+                        <div class="slider-wrapper">
+                            <h1 class="newGames">🌊 Featured Games 🌊</h1>
+                            <div class="slider">
+                                <a href="Games/NoSeries/monkeymart.html"><img id="slide-11" src="Assets/GameCovers/Thumbnails/no_series/monkey-game.png" alt="Monkey Mart"></a>
+                                <a href="Games/NoSeries/cookieclicker.html"><img id="slide-22" src="Assets/GameCovers/Thumbnails/no_series/cookieclicker.jpg" alt="Cookie Clicker"></a>
+                                <a href="Games/Papa_Louie/papasburgeria.html"><img id="slide-33" src="Assets/GameCovers/Thumbnails/papas/papasburgeria.jpg" alt="Papa's Burgeria"></a>
+                            </div>
+                            <div class="slider-nav">
+                                <a href="#slide-11"></a>
+                                <a href="#slide-22"></a>
+                                <a href="#slide-33"></a>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <script>
+                    var button = document.getElementById("toggle")
+                    let currentTheme = localStorage.getItem("selectedTheme")
+                    if (currentTheme == "light-theme") {
+                        document.body.classList.toggle(localStorage.getItem("selectedTheme"))
+                        button.className = "fa-solid fa-moon fa-2xl"
+                    };
+                    if (currentTheme == "dark-theme") {
+                        document.body.classList.toggle(localStorage.getItem("selectedTheme"));
+                        document.body.classList.toggle(localStorage.getItem("selectedTheme"))
+                        button.className = "fa-solid fa-sun fa-2xl"
+                    };
+                    
+                    button.onclick = function(){
+                        let currentThemee = localStorage.getItem("selectedTheme")
+                        if (currentThemee == "light-theme") {
+                            document.body.classList.toggle("light-theme")
+                            localStorage.setItem("selectedTheme", "dark-theme")
+                            button.className = "fa-solid fa-moon fa-2xl"
+                        } else {
+                            document.body.classList.toggle("light-theme")
+                            localStorage.setItem("selectedTheme", "light-theme")
+                            button.className = "fa-solid fa-sun fa-2xl"
+                            var flashbang = new Audio("Sounds/flash.mp3")
+                            flashbang.play()
+                        };
+                    }
+                </script>
+                <h1 class="seriesTitle">Game Series</h1>
+                <section class="flexbox2">
+                    <section class="series">
+                        <div class="item-1" id="item"><a href="Series/PapaLouie.html"><img src="Assets/GameCovers/Series/papalouie.webp" alt="Papa Louie Arcade"></a></div>
+                        <div class="item-2" id="item"><a href="Series/DuckLife.html"><img src="Assets/GameCovers/Series/ducklife.jpg" alt="Duck Life Series"></a></div>
+                        <div class="item-3" id="item"><a href="Series/HenryStickmin.html"><img src="Assets/GameCovers/Series/henrystickmin.jpg" alt="Henry Stickmin Series"></a></div>
+                        <div class="item-4" id="item"><a href="Series/RaftWars.html"><img src="Assets/GameCovers/Series/raft-wars.jpg" alt="Raft Wars Series"></a></div>
+                        <div class="item-5" id="item"><a href="Series/FNAF.html"><img src="Assets/GameCovers/Series/fnaf.jpg" alt="FNAF Series"></a></div>
+                        <div class="item-6" id="item"><a href="Series/MaxiGamesOriginals.html"><img src="Assets/GameCovers/Series/maxigamesOriginals.jpg" alt="MaxiGames Originals"></a></div>
+                        <div class="item-7" id="item"><a href="Series/RiddleSchool.html"><img src="Assets/GameCovers/Series/Rs_thumb.webp" alt="Riddle School"></a></div>
+                        <div class="item-8" id="item"><a href="Series/LearnToFly.html"><img src="Assets/GameCovers/Thumbnails/no_series/learntofly.avif" alt="Learn To Fly"></a></div>
+                        <div class="item-9" id="item"><a href="Series/BloonsTD.html"><img src="Assets/GameCovers/Thumbnails/bloons_td/bloonstd1.jpg" alt="Bloon's TD"></a></div>
+                        <div class="item-10" id="item"><a href="Series/FancyPants.html"><img src="Assets/GameCovers/Thumbnails/fancy_pants/fpa.png" alt="Fancy Pants"></a></div>
+                        <div class="item-11" id="item"><a href="Series/SugarSugar.html"><img src="Assets/GameCovers/Thumbnails/sugarsugar/sugarsugar.png" alt="Sugar, Sugar"></a></div>
+                        <div class="item-11" id="item"><a href="Series/fawg.html"><img src="Assets/GameCovers/Thumbnails/fAwg/fawg.avif" alt="FAWG 1"></a></div>
+                    </section>
+                </section>
+                <section class="flexbox3">
+                    <h1 class="seriesTitle">Games</h1>
+                    <section class="games">
+                        <div class="item-1" id="item"><a href="Games/NoSeries/Bloxorz.html"><img src="Assets/GameCovers/Icons/bloxorz.jpg" alt="Bloxorz"></a></div>
+                        <div class="item-2" id="item"><a href="Games/NoSeries/back2back.html"><img src="Assets/GameCovers/Icons/back2back.jpg" alt="Back 2 Back"></a></div>
+                        <div class="item-3" id="item"><a href="Games/chesscom.html"><img src="Assets/GameCovers/Icons/fritz.jpg" alt="Fritz Chess"></a></div>
+                        <div class="item-4" id="item"><a href="Games/NoSeries/monkeymart.html"><img src="Assets/GameCovers/Icons/monkeymart.webp" alt="Monkey Mart"></a></div>
+                        <div class="item-5" id="item"><a href="Games/NoSeries/jetpackjoyride.html"><img src="Assets/GameCovers/Icons/jetpackjoyride.png" alt="Jetpack Joyride"></a></div>
+                        <div class="item-6" id="item"><a href="Games/NoSeries/slope.html"><img src="Assets/GameCovers/Icons/slope.jpg" alt="Slope"></a></div>
+                        <div class="item-7" id="item"><a href="Games/NoSeries/ImpossibleQuiz.html"><img src="Assets/GameCovers/Icons/iq.png" alt="Impossible Quiz"></a></div>
+                        <div class="item-8" id="item"><a href="Games/NoSeries/WorldsHardGame.html"><img src="Assets/GameCovers/Icons/whg.png" alt="World's Hardest Game"></a></div>
+                        <div class="item-9" id="item"><a href="Games/NoSeries/ovo.html"><img src="Assets/GameCovers/Icons/ovo.png" alt="OvO"></a></div>
+                        <div class="item-10" id="item"><a href="Games/NoSeries/pizzatower.html"><img src="Assets/GameCovers/Icons/pizzatower.jpg" alt="Pizza Tower"></a></div>
+                        <div class="item-11" id="item"><a href="Games/NoSeries/lol.html"><img src="Assets/GameCovers/Icons/1v1lol.png" alt="1v1   lol"></a></div>
+                        <div class="item-12" id="item"><a href="Games/NoSeries/subwaysurfers.html"><img src="Assets/GameCovers/Icons/subwaysurfers.png" alt="Subway Surfers"></a></div>
+                        <div class="item-13" id="item"><a href="Games/NoSeries/stickminhook.html"><img src="Assets/GameCovers/Icons/stickmanhook.jpg" alt="Stickman Hook"></a></div>
+                        <div class="item-14" id="item"><a href="Games/NoSeries/portalflash.html"><img src="Assets/GameCovers/Icons/portalflash.jpg" alt="Portal: The Flash Version"></a></div>
+                        <div class="item-15" id="item"><a href="Games/NoSeries/crossyroad.html"><img src="Assets/GameCovers/Icons/crossyroad.avif" alt="Crossy Road"></a></div>
+                        <div class="item-16" id="item"><a href="Games/NoSeries/wbwwb.html"><img src="Assets/GameCovers/Icons/wbwwb.avif" alt="WBWWB"></a></div>
+                        <div class="item-17" id="item"><a href="Games/NoSeries/cookieclicker.html"><img src="Assets/GameCovers/Icons/cookieclicker.png" alt="Cookie Clicker"></a></div>
+                        <div class="item-18" id="item"><a href="Games/NoSeries/catmario.html"><img src="Assets/GameCovers/Icons/catmario.webp" alt="Cat Mario"></a></div>
+                        <div class="item-19" id="item"><a href="Games/NoSeries/ScaryMaze.html"><img src="Assets/GameCovers/Icons/scarymaze.webp" alt="Scary Maze"></a></div>
+                        <div class="item-20" id="item"><a href="Games/NoSeries/BurgerAndFrights.html"><img src="Assets/GameCovers/Icons/burgerfrights.jpg" alt="Burger & Frights"></a></div>
+                        <div class="item-21" id="item"><a href="Games/NoSeries/retrobowl.html"><img src="Assets/GameCovers/Icons/retrobowl.webp" alt="Retro Bowl"></a></div>
+                        <div class="item-22" id="item"><a href="Games/NoSeries/UnfairMario.html"><img src="Assets/GameCovers/Icons/unfairmario.jpg" alt="Retro Bowl"></a></div>
+                        <div class="item-22" id="item"><a href="Games/NoSeries/gdDash.html"><img src="Assets/GameCovers/Icons/gdDash.png" alt="GD DASH"></a></div>
+                        <div class="item-22" id="item"><a href="Games/NoSeries/reblex.html"><img src="Assets/GameCovers/Icons/roblox.jpg" alt="Roblox"></a></div>
+                        <div class="item-22" id="item"><a href="Games/NoSeries/motox3m.html"><img src="Assets/GameCovers/Icons/motox3m.avif" alt="Moto X3M"></a></div>
+                        <div class="item-22" id="item"><a href="Games/NoSeries/geography.html"><img src="Assets/GameCovers/Icons/earth.jpg" alt="Earth"></a></div>
+                    </section>
+                </section>
+        </div>
+        <div class="footer">
+            <img src="Assets/maxigameswhite.png" alt="MaxiGames Logo">
+            <p>MaxiGames 2024. Name it. You got it.</p>
+            <a href="Assets/easteregg.html"><img src="Assets/eastereggs/subsapce.webp" alt="funi" id="tripmine"></a>
+        </div>
+    </body>
+</html>
