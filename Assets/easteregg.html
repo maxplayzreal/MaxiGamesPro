@@ -1,0 +1,54 @@
+<html>
+    <title>MaxiGames</title>
+    <head>
+        <link rel="stylesheet" href="easter.css">
+        <link rel="icon" type="image/x-icon" href="../Assets/mg_favicon.png">
+
+        <script src="https://kit.fontawesome.com/099ae7de0b.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+      </style>
+    </head>
+        
+
+    <body>
+        <div class="banner" id="background">
+            <div class="navbar">
+                <img src="../Assets/maxigameslogoglow.png" alt="MaxiGames Logo" draggable="false" id="maxigameslogo">
+                <ul>
+                    <li><a href="../gamespage.html"><i class="fa-solid fa-gamepad fa-2xl"></i></a></li>
+                    <li><a href="../index.html"><i class="fa-solid fa-house fa-2xl"></i></a></li>
+                </ul>
+            </div>
+            <div class="content1">
+                <div id="cool-particles"></div>
+
+                <script src="../particles.js"></script>
+                <script src="../Particles/particletripmine.js"></script>
+
+                <button onclick="playSound()" type="button"><img src="../Assets/eastereggs/subsapce.webp" alt="main" id="tripmineIMG"></button>
+                <script>
+                    var audio = new Audio('../Assets/Sounds/tripmineEXP.mp3');
+                    var button = document.getElementsByClassName('button');
+                    var image = document.getElementById('tripmineIMG');
+                    var background = document.getElementById('background');
+                    var particles = document.getElementById('cool-particles');
+                    
+
+                    function playSound() {
+                        audio.play();
+                        button.disabled = true;
+                        background.style.background = "magenta";
+                        image.style.display = "none";
+                        particles.style.visibility = "visible";
+                    }
+                </script>
+            </div>
+        </div>
+        <div class="footer">
+            <img src="../Assets/maxigameswhite.png" alt="MaxiGames Logo">
+            <p>MaxiGames 2023. Name it. You got it.</p>
+            <a target="_blank" href="https://github.com/maxplayzreal/MaxiGames_Official"><i class="fa-brands fa-github fa-2xl"></i></a>
+        </div>
+    </body>
+</html>
