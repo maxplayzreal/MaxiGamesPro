@@ -1,0 +1,104 @@
+<html>
+    <title>MaxiGames | Geometry Dash</title>
+    <head>
+        <link rel="stylesheet" href="../stylegames.css">
+        <link rel="icon" type="image/x-icon" href="../../Assets/mg_favicon.png">
+
+        <script src="https://kit.fontawesome.com/099ae7de0b.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+      </style>
+    </head>
+        
+
+    <body>
+        <div class="banner">
+            <div class="navbar">
+                <a href="../../index.html">
+                    <img src="../../Assets/maxigameslogoglow.png" alt="MaxiGames Logo" href="../index.html" draggable="false" id="maxigameslogo">
+                </a>
+                <ul>
+                    <li><a href="../../gamespage.html"><i class="fa-solid fa-gamepad fa-2xl"></i></a></li>
+                    <li><a href="../../index.html"><i class="fa-solid fa-house fa-2xl"></i></a></li>
+                </ul>
+            </div>
+            <div class="content1">
+                <div class="title">
+                    <h1>Geometry Dash</h1>
+                </div>
+                <div class="player_container" style="text-align: center;">
+                    <iframe src="../../SelfHosted/scratch/gdDash.html" frameborder="0" width="60%" height="75%"  id="htmlGamePlayer"></iframe>
+                </div>
+                <img draggable="false" src="../../Assets/Fullscreen.png" alt="Fullscreen Game" class="fullscreenBTN" onclick="fullscreenRuffleScript() ">
+
+                <script>
+                    function fullscreenRuffleScript() {
+                        var player = document.getElementById("htmlGamePlayer");
+
+                        if(player.requestFullscreen) {
+                            player.requestFullscreen();
+                        } else if (player.webkitRequestFullscreen) {
+                            player.webkitRequestFullscreen();
+                        } else if (player.msRequestFullscreen) {
+                            player.msRequestFullscreen();
+                        }
+                    }
+                </script>
+                 <script>
+                    var button = document.getElementById("toggle")
+                    let currentTheme = localStorage.getItem("selectedTheme")
+                    if (currentTheme == "light-theme") {
+                        document.body.classList.toggle(localStorage.getItem("selectedTheme"))
+                        button.className = "fa-solid fa-moon fa-2xl"
+                    };
+                    if (currentTheme == "dark-theme") {
+                        document.body.classList.toggle(localStorage.getItem("selectedTheme"));
+                        document.body.classList.toggle(localStorage.getItem("selectedTheme"))
+                        button.className = "fa-solid fa-sun fa-2xl"
+                    };
+                    
+                    button.onclick = function(){
+                        let currentThemee = localStorage.getItem("selectedTheme")
+                        if (currentThemee == "light-theme") {
+                            document.body.classList.toggle("light-theme")
+                            localStorage.setItem("selectedTheme", "dark-theme")
+                            button.className = "fa-solid fa-moon fa-2xl"
+                        } else {
+                            document.body.classList.toggle("light-theme")
+                            localStorage.setItem("selectedTheme", "light-theme")
+                            button.className = "fa-solid fa-sun fa-2xl"
+                            var flashbang = new Audio("Sounds/flash.mp3")
+                            flashbang.play()
+                        };
+                    }
+                </script>
+
+                <div class="description">
+                    <h2>Description</h2>
+                    <p>Geometry Dash is a music platformer where you click to jump and you beat levels and obsticles <br> <br> <strong><a href="https://maxigames.vercel.app" target="_blank">Description by MaxiGames</a></strong></p>
+                </div>
+                <div class="controls">
+                    <h2>Controls</h2>
+                    <i class="fa-solid fa-keyboard fa-2xl" style="color: #ffffff;"></i>
+                    <p>Click or press spacebar to jump or fly</p>
+                </div>
+                <div class="agrating">
+                    <h2>Age Rating</h2>
+                    <img src="../../Assets/ARatings/everyone.png" alt="Everyone">
+                    <p>Everyone</p>
+                </div>
+                <div class="plusInfo">
+                    <h2>Additional Info</h2>
+                    <img src="../../Assets/GameEngine/FIREINTHEHOLE.jpg" alt="HTML5">
+                    <p>Game Engine: Scratch
+                    <p>Original Release Date: May 24, 2012</p>
+                    <p>Release Date on MaxiGames: February 21, 2024</p>
+                </div>
+        </div>
+        <div class="footer">
+            <img src="../../Assets/GameEngine/FIREINTHEHOLE.jpg" alt="MaxiGames Logo">
+            <p>MaxiGames 2024. Name it. You got it.</p>
+            <a target="_blank" href="https://github.com/maxplayzreal/MaxiGames_Official"><i class="fa-brands fa-github fa-2xl"></i></a>
+        </div>
+    </body>
+</html>

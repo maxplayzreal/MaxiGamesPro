@@ -1,0 +1,109 @@
+<html>
+    <title>MaxiGames | Learn to Fly 3</title>
+    <head>
+        <link rel="stylesheet" href="../stylegames.css">
+        <link rel="icon" type="image/x-icon" href="../../Assets/mg_favicon.png">
+
+        <script src="https://kit.fontawesome.com/099ae7de0b.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+      </style>
+    </head>
+        
+
+    <body>
+        <div class="banner">
+            <div class="navbar">
+                <a href="../../index.html">
+                    <img src="../../Assets/maxigameslogoglow.png" alt="MaxiGames Logo" href="../index.html" draggable="false" id="maxigameslogo">
+                </a>
+                <ul>
+                    <li><a href="../../gamespage.html"><i class="fa-solid fa-gamepad fa-2xl"></i></a></li>
+                    <li><a href="../../index.html"><i class="fa-solid fa-house fa-2xl"></i></a></li>
+                </ul>
+            </div>
+            <div class="content1">
+                <div class="title">
+                    <h1>Learn to Fly 3</h1>
+                </div>
+                <div class="player_container">
+                    <script>
+                        window.RufflePlayer = window.Ruffle || {};
+                        window.RufflePlayer.config = {
+                            "scale": "showAll",
+                            "forceScale": true,
+                        }
+                    </script>
+                    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+<div class="swf"dir="ltr" style="text-align: center;" trbidi="on">
+        <embed width="60%" height="75%" pluginspage=" http://www.macromedia.com/go/getflashplayer" src="https://maxplayzreal.github.io/Flash-Games-SWF/learntofly3.swf
+        " type="application/x-shockwave-flash"></embed>
+</div>
+                </div>
+                <img draggable="false" src="../../Assets/Fullscreen.png" alt="Fullscreen Game" class="fullscreenBTN" onclick="fullscreenRuffleScript() ">
+
+                <script>
+                    function fullscreenRuffleScript() {
+                        document.querySelector("ruffle-embed, ruffle-object, ruffle-player").enterFullscreen();
+                    }
+                </script>
+                <script>
+                    var button = document.getElementById("toggle")
+                    let currentTheme = localStorage.getItem("selectedTheme")
+                    if (currentTheme == "light-theme") {
+                        document.body.classList.toggle(localStorage.getItem("selectedTheme"))
+                        button.className = "fa-solid fa-moon fa-2xl"
+                    };
+                    if (currentTheme == "dark-theme") {
+                        document.body.classList.toggle(localStorage.getItem("selectedTheme"));
+                        document.body.classList.toggle(localStorage.getItem("selectedTheme"))
+                        button.className = "fa-solid fa-sun fa-2xl"
+                    };
+                    
+                    button.onclick = function(){
+                        let currentThemee = localStorage.getItem("selectedTheme")
+                        if (currentThemee == "light-theme") {
+                            document.body.classList.toggle("light-theme")
+                            localStorage.setItem("selectedTheme", "dark-theme")
+                            button.className = "fa-solid fa-moon fa-2xl"
+                        } else {
+                            document.body.classList.toggle("light-theme")
+                            localStorage.setItem("selectedTheme", "light-theme")
+                            button.className = "fa-solid fa-sun fa-2xl"
+                            var flashbang = new Audio("Sounds/flash.mp3")
+                            flashbang.play()
+                        };
+                    }
+                </script>
+
+                <div class="description">
+                    <h2>Description</h2>
+                    <p>Learn to Fly 2 is a launcher game where you play as a penguin attempting to fly using a ramp and various gadgets. It is the sequel of the highly-rated game Learn to Fly. In this game, you play a penguin trying to launch himself in the air to fly. <br> <br> <strong><a href="https://knogregate.fandom.com" target="_blank">Description by Kongregate Fandom</a></strong></p>
+                </div>
+                <div class="controls">
+                    <h2>Controls</h2>
+                    <i class="fa-solid fa-computer-mouse fa-2xl" style="color: #ffffff;"></i>
+                    <p>Use mouse to interact with GUI</p>
+                    <i class="fa-solid fa-arrows-up-down-left-right fa-2xl" style="color: #ffffff;"></i>
+                    <p>Use Left & Right Arrow Keys to angle your character</p>
+                </div>
+                <div class="agrating">
+                    <h2>Age Rating</h2>
+                    <img src="../../Assets/ARatings/everyone.png" alt="Everyone">
+                    <p>Everyone</p>
+                </div>
+                <div class="plusInfo">
+                    <h2>Additional Info</h2>
+                    <img src="../../Assets/GameEngine/flash.png" alt="Adobe Flash">
+                    <p>Game Engine: Adobe Flash | Emulated with <strong><a href="https://ruffle.rs" target="_blank">Ruffle</a></strong></p>
+                    <p>Original Release Date: June 16, 2011</p>
+                    <p>Release Date on MaxiGames: September 30, 2023</p>
+                </div>
+        </div>
+        <div class="footer">
+            <img src="../../Assets/maxigameswhite.png" alt="MaxiGames Logo">
+            <p>MaxiGames 2024. Name it. You got it.</p>
+            <a target="_blank" href="https://github.com/maxplayzreal/MaxiGames_Official"><i class="fa-brands fa-github fa-2xl"></i></a>
+        </div>
+    </body>
+</html>
